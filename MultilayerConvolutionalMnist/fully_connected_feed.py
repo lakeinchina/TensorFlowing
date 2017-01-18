@@ -1,8 +1,8 @@
 import tensorflow as tf
 import input_data
-# from PIL import Image
-# import numpy as np
-# import os
+from PIL import Image
+import numpy as np
+import os
 
 def weight_variable(shape):
     initial = tf.truncated_normal(shape,stddev=0.1)
