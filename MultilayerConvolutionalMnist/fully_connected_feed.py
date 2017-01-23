@@ -20,7 +20,6 @@ def max_pool_2x2(x):
 
 
 def run_training():
-    #读数据
     mnist = input_data.read_data_sets('data', one_hot=True)
 
     x = tf.placeholder("float", shape=[None, 784])
@@ -64,7 +63,7 @@ def run_training():
     sess  = tf.InteractiveSession()
     sess.run(tf.initialize_all_variables())
 
-    for i in range(10000):
+    for i in range(20000):
         batch = mnist.train.next_batch(50)
         if i%100 == 0:
             # drawW_conv1(sess, W_conv1, i)
